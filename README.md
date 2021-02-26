@@ -103,7 +103,7 @@ _Before you continue, make sure port 8080 and 8443 are freed up again by stoppin
    - run `sudo chmod 755 /etc/systemd/system/6tunnel.service`
    - run `sudo systemctl daemon-reload && sudo systemctl enable 6tunnel`
 
-# Part 4 - Optional: Setup Domain DNS
+# [Optional] Part 4: Setup Domain DNS
 
 1. Go to your domain provider (e.g. Route53 on AWS or UnitedDomains or Strato)
 
