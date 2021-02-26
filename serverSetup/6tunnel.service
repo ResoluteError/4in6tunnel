@@ -1,0 +1,12 @@
+[Unit]
+Description=Autossh keepalive daemon
+## make sure we only start the service after network is up
+Wants=network-online.target
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/6tunnel-setup.sh
+User=ubuntu
+
+[Install]
+WantedBy=multi-user.target
