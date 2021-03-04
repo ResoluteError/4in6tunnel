@@ -8,7 +8,11 @@
 
    - required for ssh access into the EC2 that will be created: https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#KeyPairs
 
-2. Run `chmod 400 4in6tunnel.pem` on the stored key file (update file name)
+2. Move the key to your desired directory and change the permission to read by owner only
+
+   - Mac/Linux: Run `chmod 400 4in6tunnel.pem` (replace 4in6tunnel.pem with your key name)
+   - Windows: Check out https://superuser.com/questions/1296024/windows-ssh-permissions-for-private-key-are-too-open
+
 3. Go to CloudFormation
 
    - https://eu-west-1.console.aws.amazon.com/cloudformation/home?region=eu-west-1#/stacks?filteringStatus=active&filteringText=&viewNested=true&hideStacks=false
@@ -25,6 +29,7 @@
 7. Open the terminal an SSH into the server using the ubuntu username and the key you generated in step 1
 
    - e.g. ssh -i "ipForwardTest.pem" ubuntu@ec2-54-74-193-16.eu-west-1.compute.amazonaws.com
+   - _Note:_ Windows users may need to setup SSH: https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/
 
 # [Optional] Part 2: Setup node & test the server reachability
 
